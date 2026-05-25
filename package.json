@@ -1,0 +1,28 @@
+{
+  "name": "hedera-enterprise-procure-agent",
+  "version": "0.1.0",
+  "description": "A testnet-only enterprise procurement agent using Hedera Agent Kit v4 plus an ERP validation plugin.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "tsc --noEmit",
+    "test": "vitest run",
+    "demo": "tsx src/index.ts --invoice INV-1001 --dry-run",
+    "inspect:tools": "tsx src/inspect-tools.ts"
+  },
+  "dependencies": {
+    "@hashgraph/hedera-agent-kit": "^4.0.0",
+    "@hashgraph/hedera-agent-kit-langchain": "^1.0.0",
+    "@hiero-ledger/sdk": "^2.81.0",
+    "dotenv": "^17.2.3",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.14"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
