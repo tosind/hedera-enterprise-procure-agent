@@ -17,10 +17,10 @@ Hedera Enterprise Procure Agent demonstrates how an enterprise finance workflow 
 The default mode is `AgentMode.RETURN_BYTES`, with no mainnet path and no autonomous fund-transfer tool registered. A valid invoice produces a human-signature-ready approval plan and HCS audit memo; invalid invoices are blocked with explicit reasons.
 
 GitHub repository URL:
-TBD after public repo push.
+https://github.com/tosind/hedera-enterprise-procure-agent
 
 Demo URL:
-TBD after GitHub Pages is enabled, or use the public repository README if Pages is not available in time.
+https://tosind.github.io/hedera-enterprise-procure-agent/
 
 Implementation details:
 Built in TypeScript with `@hashgraph/hedera-agent-kit` v4, `@hashgraph/hedera-agent-kit-langchain`, and `@hiero-ledger/sdk`. The agent uses Hedera Agent Kit `ToolDiscovery` and `HederaAgentAPI` to register a custom enterprise plugin alongside `coreAccountQueryPlugin` and `coreConsensusPlugin`. The custom plugin exposes `erp_validate_invoice_tool`, which must approve an invoice before the agent can call the Hedera consensus plugin's `submit_topic_message_tool`.
@@ -45,6 +45,6 @@ Verification evidence: `npm run build`, `npm test`, and `npm run demo` pass loca
 
 ## Current Readiness
 
-Ready for public GitHub publication after final push.
+Public GitHub repo is published. GitHub Pages is enabled from `main:/docs`; it may need a few minutes after first enablement to render.
 
 Blocked for final Hedera form submission until owner supplies private fields and approves terms.
